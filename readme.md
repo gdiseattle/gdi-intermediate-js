@@ -1,6 +1,6 @@
 # GDI Dayton Intermediate JavaScript
 
-Slides and materials are hosted at [http://gdidayton.com/gdi-intermediate-javascript](http://gdidayton.com/gdi-intermediate-javascript).
+Slides and materials are hosted at [http://gdidayton.com/gdi-intermediate-js](http://gdidayton.com/gdi-intermediate-js.
 
 ## Course description
 
