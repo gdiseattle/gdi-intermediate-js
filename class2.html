@@ -384,15 +384,23 @@ catCall(); //Come here, Artie</code></pre>
 				<section>
 					<h3><code>call()</code></h3>
 					<p>Invokes the function, allows you to explicity set the value of <code>this</code> and pass in arguments one by one</p>
-<pre><code class="javascript">var cat1 = {name: 'Mabel', age: 6 };
-var cat2 = {name: 'Ollie', age: 1 };
-
-function feedCat(food) {
-	console.log('Feeding some ' + food + ' to ' + this.name);
+<pre><code class="javascript">function Animal(name, age) {
+  this.name = name;
+  this.age = age;
 }
 
-feedCat.call(cat1, 'salmon');
-feedCat.call(cat2, 'tuna');</code></pre>
+function Cat(name, age) {
+  Animal.call(this, name, age);
+  this.category = 'cat';
+}
+
+function Dog(name, age) {
+  Animal.call(this, name, age);
+  this.category = 'dog';
+}
+
+var cat = new Cat('Artie', 5);
+var dog = new Dog('Roscoe', 40);</code></pre>
 				</section>
 
 				<section>
