@@ -354,6 +354,7 @@ window.sayHello();</code></pre>
 
 				<section>
 					<h3>Functions are objects</h3>
+					<h4>Function on Function Action</h4>
 					<p>Don't forget! Functions in JavaScript are objects.</p>
 					<p>They have properties and methods just like any other object.</p>
 					<p>Let's take a look at a few methods.</p>
@@ -362,17 +363,22 @@ window.sayHello();</code></pre>
 				<section>
 					<h3><code>bind()</code></h3>
 					<p>Use the <code>bind()</code> method to explicity set the value of <code>this</code> without invoking the function immediately.</p>
-<pre><code class="javascript">var cat = {
-	name: 'Ollie',
-	age: 1,
+<pre><code class="javascript">this.name = 'Ollie'
+var cat = {
+	name: 'Artie',
 	callCat: function() {
 		console.log('Come here, ' + this.name);
 	}
 };
+cat.callCat(); //Come here, Artie
 
-var btn = document.getElementById('myBtn');
+var catCall = cat.callCat;
+catCall();
+// Come here, Ollie  - The function gets invoked at the global scope
 
-btn.onclick = cat.callCat.bind(cat);</code></pre>
+// global var name with module's property name
+var catCall = cat.callCat.bind(cat);
+catCall(); //Come here, Artie</code></pre>
 				</section>
 
 				<section>
