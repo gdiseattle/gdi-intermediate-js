@@ -286,7 +286,7 @@ body {
 }
 
 .reveal p {
-	margin-bottom: 10px;
+	margin-bottom: 1.5em;
 	line-height: 1.2em;
 }
 
@@ -1889,5 +1889,3 @@ body {
 .zoomed .reveal .roll span:after {
 	visibility: hidden;
 }
-
-

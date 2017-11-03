@@ -58,6 +58,7 @@
 					</p>
 				</section>
 
+
 				<!-- Functions -->
 				<section>
 					<h3>Functions</h3>
@@ -404,18 +405,18 @@ var dog = new Dog('Roscoe', 40);</code></pre>
 				</section>
 
 				<section>
-					<h3><code>apply()</code></h3>
-					<p>Invokes the function, allows you to explicity set the value of <code>this</code> and pass in an array of arguments.</p>
-<pre><code class="javascript">var cat1 = {name: 'Mabel', age: 6 };
-var cat2 = {name: 'Ollie', age: 1 };
-
-function feedCat(food) {
-	console.log('Feeding some ' + food + ' to ' + this.name);
-}
-
-feedCat.apply(cat1, ['salmon','turkey','chicken']);
-feedCat.apply(cat2, ['tuna','beef']);</code></pre>
-				</section>
+					<h3>Other Functions</h3>
+					<p>
+						Check them out <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">here</a>
+					</p>
+					<ul>
+						<li><code>apply()</code></li>
+						<li><code>isGenerator()</code></li>
+						<li><code>toSource()</code></li>
+						<li><code>toString()</code></li>
+						</li>
+					</ul>
+				<section>
 
 				<section>
 					<h3>Inner functions</h3>
@@ -423,7 +424,8 @@ feedCat.apply(cat2, ['tuna','beef']);</code></pre>
 <pre><code class="javascript">function showRelationship(personName, catName) {
 	var intro = "Please meet ";
 	function makeSentence() {
-		return intro + catName + ' and his human, ' + personName;
+		return intro + catName
+		+ ' and his human, ' + personName;
 	}
 	console.log(makeSentence());
 }
@@ -481,6 +483,10 @@ showRelationship('Natalie', 'Ollie');</code></pre>
 						<li>Parent/child</li>
 						<li>Siblings</li>
 					</ul>
+
+					<aside class="notes">
+						review what parent and child means
+					</aside>
 				</section>
 
 				<section>
@@ -620,7 +626,7 @@ var myCallback = function() {
 
 myButton.addEventListener('click', myCallback);</code></pre>
 					<p>&nbsp;</p>
-					<p>Now, we can remove that event listener later on:</p>
+					<p>We can remove that event listener later on:</p>
 <pre><code class="javascript">myButton.removeEventListener('click', myCallback);
 </code></pre>
 				</section>
