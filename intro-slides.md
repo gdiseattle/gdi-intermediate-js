@@ -1,10 +1,9 @@
 ![Girl Develop It](img/dayton-logo.png) <!-- .element: class="no-border" -->
 
 #### Network: BuildRight
-#### Password: ???
 #### Slides: [https://gdidayton.github.io/gdi-intermediate-js/](https://gdidayton.github.io/gdi-intermediate-js/)
 
-While you wait for class to begin, get on the wifi, bring up the slides and go through the prerequistes for class.
+While you wait for class to begin, get on the wifi, bring up the slides and go through the prerequisites for class.
 
 ---
 ![Girl Develop It](img/dayton-logo.png) <!-- .element: class="no-border" -->
@@ -39,7 +38,7 @@ Girl Develop It is here to provide affordable and accessible programs to learn s
 
 ---
 ## A few quick announcements
-* WiFi Network is BuildRight the password is ???
+* WiFi Network is BuildRight
 * Restrooms are down the ramp and to the right
 * Please be respectful!
 ---					
