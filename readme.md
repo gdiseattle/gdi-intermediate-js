@@ -44,3 +44,14 @@ You should have:
  - Object-oriented JavaScript, including prototypes and inheritance
  - Advanced DOM Manipulation, including event delegation
  - Ajax and JSON - including how to make asynchronous calls, parse JSON responses, and update the UI
+ 
+ 
+ ## Course Materials
+
+Resource|URL
+---|---
+Intro|[Intro Slides](https://gdidayton.github.io/gdi-intermediate-js/intro-slides.html)
+Slides|[https://gdidayton.github.io/gdi-intermediate-js/](https://gdidayton.github.io/gdi-intermediate-js/#/)
+Codepen|[https://codepen.io/collection/AygMPm/](https://codepen.io/collection/AygMPm/)
+
+
