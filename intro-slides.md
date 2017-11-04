@@ -1,7 +1,7 @@
 ![Girl Develop It](img/dayton-logo.png) <!-- .element: class="no-border" -->
 
 #### Network: BuildRight
-#### Slides: [https://gdidayton.github.io/gdi-intermediate-js/](https://gdidayton.github.io/gdi-intermediate-js/)
+#### Slides: [http://bit.ly/gdi-inter-js-slides](https://gdidayton.github.io/gdi-intermediate-js/)
 
 While you wait for class to begin, get on the wifi, bring up the slides and go through the prerequisites for class.
 
