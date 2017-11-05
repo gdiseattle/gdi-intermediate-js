@@ -55,15 +55,47 @@
 						<p>&hellip;in JavaScript is really</p>
 						<h3>&ldquo;Object-oriented&rdquo; JavaScript</h3>
 						<p>JavaScript is not a strict OO language like Java, but we can still use it in an object-oriented way.</p>
-						<p>Future versions of JavaScript are already in the works with more OO features built into the language.</p>
 					</div>
 				</section>
+
+        <section>
+          <h3>What is Object-Oriented Programming?</h3>
+          <ul>
+            <li>Object Oriented Programming is one of many <strong>programming approaches</strong>: procedural, event-driven, declarative...</li>
+            <li>All this means is that programs are <strong>organized around objects</strong> (data &amp; functions).</li>
+            <li>You might choose OOP because Objects make things <strong>easier to understand</strong> and act as a natural way to break your code into modules. When a large code base is composed of many small Objects, it is <strong>easier to maintain</strong> and change.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Why use OOP?</h3>
+					<br>
+          <p>Easy to Understand</p>
+					<p>Without seeing my code, you can probably guess what an object called <code>Bike</code> can do (or not do)</p>
+					<iframe src="https://giphy.com/embed/StWnlQipuBrz2" width="480" height="269" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/electriccyclery-bicycle-trash-panda-StWnlQipuBrz2">via GIPHY</a></p>
+				</section>
+
+				<section>
+					<h3>Why use OOP?</h3>
+					<br>
+          <p>Encapsulation</p>
+          <p>a fancy way of saying "put all of my properties/behaviors in one place where other objects can't touch them"</p>
+					<iframe src="https://giphy.com/embed/gpGrAKmOsiD3W" width="480" height="336" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/mc-hammer-gpGrAKmOsiD3W">via GIPHY</a></p>
+				</section>
+
+				<section>
+					<h3>Why use OOP?</h3>
+					<br>
+          <p>Inheritance</p>
+          <p>Just as you inherited traits from you mom, your objects may inherit traits from other objects</p>
+					<iframe src="https://giphy.com/embed/3o6EhNI0ycLthisQlW" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/baby-mom-mothersday-3o6EhNI0ycLthisQlW">via GIPHY</a></p>
+        </section>
 
 				<section>
 					<h3>JavaScript Object Prototypes</h3>
 					<p>Every object in JavaScript has a prototype.</p>
-					<p>All JavaScript objects inherit their properties and their methods from their prototype.</p>
-					<p>This is called <span class="blue">prototypal inheritance</span></p>
+					<p>All JavaScript objects inherit their properties and their functions from their prototype.</p>
+					<p>This is called <strong>prototypal inheritance</strong></p>
 				</section>
 
 				<section>
@@ -71,11 +103,11 @@
 					<p>We know that when we create a new array:</p>
 					<ul>
 						<li>It will have a <code>length</code> property</li>
-						<li>It will have a <code>map()</code> method</li>
-						<li>It will have a <code>filter()</code> method</li>
-						<li>It will have a <code>join()</code> method</li>
+						<li>It will have a <code>map()</code> function</li>
+						<li>It will have a <code>filter()</code> function</li>
+						<li>It will have a <code>join()</code> function</li>
 					</ul>
-					<p>An array inherits these properties and methods from an <code>Array</code> prototype that defines what an array is (properties) and what it can do (methods)</p>
+					<p>An array inherits these properties and functions from an <code>Array</code> prototype that defines what an array is (properties) and what it can do (functions)</p>
 				</section>
 
 				<section>
@@ -83,16 +115,15 @@
 					<p>Let's use a book as an example of an object prototype.</p>
 					<div style="width:50%;margin-left:auto;margin-right:auto;border:5px solid #333;padding:0.5em;">
 						<h4>Book prototype</h4>
-						<p>Properties:</p>
-						<ul>
+						<p style="margin-bottom:0">Properties:</p>
+						<ul style="margin-bottom: 1em">
 							<li>title</li>
 							<li>author</li>
 							<li>pages</li>
 						</ul>
-						<p>Methods:</p>
+						<p style="margin-bottom: 0">Function:</p>
 						<ul>
 							<li>read()</li>
-							<li>buy()</li>
 						</ul>
 					</div>
 				</section>
@@ -103,16 +134,16 @@
 					<div style="overflow:hidden;">
 						<div style="width:33%;float:left;">
 							<div style="margin:0 0.5em;padding:0.5em;border:5px solid #333;">
-								<h4>The Giver</h4>
-								<p>by Lois Lowry</p>
-								<p>179 pages</p>
+								<h4>Kindred</h4>
+								<p>by Octavia Butler</p>
+								<p>264 pages</p>
 							</div>
 						</div>
 						<div style="width:33%;float:left;">
 							<div style="margin:0 0.5em;padding:0.5em;border:5px solid #333;">
-								<h4>Fox in Sox</h4>
-								<p>by Dr. Seuss</p>
-								<p>62 pages</p>
+								<h4>The Handmaid's Tale</h4>
+								<p>by Margaret Atwood</p>
+								<p>311 pages</p>
 							</div>
 						</div>
 						<div style="width:33%;float:left;">
@@ -123,13 +154,13 @@
 							</div>
 						</div>
 					</div>
-					<p>Each is an <span class="blue">instance</span> of the <code>Book</code> object prototype.</p>
+					<p>Each is an <strong>instance</strong> of the <code>Book</code> object prototype.</p>
 				</section>
 
 				<section>
 					<h3>Defining an object prototype</h3>
-					<p>Define a <span class="blue">constructor</span> function with the object prototype's properties and methods:</p>
-<pre><code class="javascript">function Book(title, author, numPages) {
+					<p>Define a <strong>constructor</strong> function with the object prototype's properties and functions:</p>
+<pre style="margin-bottom: 2em"><code class="javascript">function Book(title, author, numPages) {
 	this.title = title;
 	this.author = author;
 	this.numPages = numPages;
@@ -140,15 +171,17 @@
 	};
 }</code></pre>
 					<p>Conventionally, object prototype names are capitalized.</p>
+					<a href="http://bit.ly/intermediate-js-book" target=blank>http://bit.ly/intermediate-js-book</a>
 				</section>
 
 				<section>
 					<h3>Instantiating an object</h3>
-					<p>Now that we have a prototype, we can <span class="blue">instantiate</span> a new object:</p>
-<pre><code class="javascript">var book = new Book("Robot Dreams", "Isaac Asimov", 320);
+					<p>Now that we have a prototype, we can <strong>instantiate</strong> a new object:</p>
+<pre style="margin-bottom: 2em"><code class="javascript">var kindred = new Book('Kindred', "Octavia Butler", 211);
 
-book.read(); // Will log "You read 320 pages!" to the console</code></pre>
-				<p>This creates a new object that inherits the properties and methods from the prototype that we defined.</p>
+kindred.read(); // Will log "You read 264 pages!" to the console</code></pre>
+				<p>This creates a new object that inherits the properties and functions from the prototype that we defined.</p>
+				<iframe src="https://giphy.com/embed/WoWm8YzFQJg5i" width="480" height="351" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/cartoons-comics-sea-reading-WoWm8YzFQJg5i">via GIPHY</a></p>
 				</section>
 
 				<section>
@@ -165,20 +198,20 @@ book.read(); // Will log "You read 320 pages!" to the console</code></pre>
 				<section>
 					<h3>Adding new properties to objects</h3>
 					<p>Let's say we've created two book objects using the Book prototype we set up earlier:</p>
-<pre><code class="javascript">var myBook1 = new Book('The Boxcar Children', 'Gertrude Chandler Warner', 160);
+<pre style="margin-bottom: 2em"><code class="javascript">var persepolis = new Book('Persepolis', 'Marjane Satrapi', 160);
 
-var myBook2 = new Book('Around the World in 80 Days', 'Jules Verne', 315);</code></pre>
+var frankenstein = new Book('Frankenstein', 'Mary Shelley', 280);</code></pre>
 					<p>Let's add a <code>series</code> property to the first book:</p>
-<pre><code class="javascript">myBook1.series = 'The Boxcar Children';</code></pre>
-					<p>This new property gets added to <span class="green">The Boxcar Children</span>, but not to <span class="green">Around the World in 80 days</span>, and not to any other new objects created from the Book prototype.</p>
+<pre style="margin-bottom: 2em"><code class="javascript">persepolis.series = 'Persepolis';</code></pre>
+					<p>This new property gets added to <span class="green">Persepolis</span>, but not to <span class="green">Frankenstein</span>, and not to any other new objects created from the Book prototype.</p>
 				</section>
 
 				<section>
-					<h3>Adding new properties and methods to object prototypes</h3>
-					<p>We can use the prototype property to add new properties and methods to the object prototype:</p>
+					<h3>Adding new properties and functions to object prototypes</h3>
+					<p>We can use the prototype property to add new properties and functions to the object prototype:</p>
 					<p>Adding a property:</p>
-<pre><code class="javascript">Book.prototype.series = '';</code></pre>
-					<p>Adding a method:</p>
+<pre style="margin-bottom: 2em"><code class="javascript">Book.prototype.series = '';</code></pre>
+					<p>Adding a function:</p>
 <pre><code class="javascript">Book.prototype.buy = function(){
 	console.log('You bought ' + this.name);
 }</code></pre>
@@ -186,20 +219,19 @@ var myBook2 = new Book('Around the World in 80 Days', 'Jules Verne', 315);</code
 
 				<section>
 					<h3>Let's Develop It!</h3>
-					<p>Create a <code>Video</code> object prototype. The <code>Video</code> object prototype should have the following properties and methods:</p>
+					<p>Let's use our Book prototype, but let's add a couple of new properties and functions</p>
 					<ul>
-						<li><code>title</code> - a string</li>
-						<li><code>uploader</code> - a string, the person who uploaded the video</li>
-						<li><code>seconds</code> - a number, the duration of the video</li>
-						<li><code>watch()</code> - a method that logs a string to the console, e.g. "You watched all 76 seconds of Maru in a box!"</li>
+						<li><code>rating</code> - a number, rating out of 10</li>
+						<li><code>genre</code> - a string, the genre of the book</li>
+						<li><code>getRating()</code> - a function that logs a string to the console, e.g. "You rated this book x out of 10!"</li>
 					</ul>
 					<p>&nbsp;</p>
-					<p>Then instantiate a new <code>Video</code> object and call the <code>watch()</code> method on it.</p>
+					<p>Then instantiate a new <code>Book</code> object and call your new functions on it.</p>
 				</section>
 
 				<section>
 					<h3>Object-oriented programming</h3>
-					<p>Object prototypes can inherit properties and methods from other object prototypes.</p>
+					<p>Object prototypes can inherit properties and functions from other object prototypes.</p>
 					<div style="overflow:hidden;">
 						<div style="width:33%;float:left;">
 							<div style="margin:0 0.5em;padding:0.5em;border:5px solid #333;">
@@ -209,7 +241,6 @@ var myBook2 = new Book('Around the World in 80 Days', 'Jules Verne', 315);</code
 									<li><code>author</code></li>
 									<li><code>pages</code></li>
 									<li><code>read()</code></li>
-									<li><code>buy()</code></li>
 								</ul>
 							</div>
 						</div>
@@ -245,7 +276,7 @@ var myBook2 = new Book('Around the World in 80 Days', 'Jules Verne', 315);</code
 }</code></pre>
 					<p>Extend the Book object prototype</p>
 <pre><code class="javascript">PaperBack.prototype = Object.create(Book.prototype);</code></pre>
-					<p>Define a new method on this object prototype</p>
+					<p>Define a new function on this object prototype</p>
 <pre><code class="javascript">PaperBack.prototype.burn = function() {
 	console.log("Omg, you burnt all " + this.numPages + " pages");
 	this.numPages = 0;
@@ -264,9 +295,9 @@ paperback.burn();</code></pre>
 
 				<section>
 					<h3>Let's Develop It!</h3>
-					<p>Building on the exercise from last time, create a new object prototype <code>MusicVideo</code> that extends <code>Video</code>. The constructor should also take in an <code>artist</code> property.</p>
-					<p>Instantiate a new <code>MusicVideo</code> object and call the <code>watch()</code> method on it.</p>
-					<p>Add a new method to the <code>MusicVideo</code> object prototype called <code>rockOut()</code> that logs a message to the console, e.g. "You just rocked out to Shake it Off by Taylor Swift!"</p>
+					<p>Building on the exercise from last time, create a new object prototype <code>Hardcover</code> that extends <code>Book</code>. The constructor should also take in an <code>edition</code> property.</p>
+					<p>Instantiate a new <code>Hardcover</code> object and call the <code>read()</code> function on it.</p>
+					<p>Add a new function to the <code>Hardcover</code> object prototype called <code>getEdition()</code> that logs a message to the console, e.g. "Your book is a first edition!"</p>
 				</section>
 
 				<section>
@@ -280,9 +311,9 @@ paperback.burn();</code></pre>
 }</code></pre>
 <p>Then we pass in an object instead of a series of arguments to instantiate a new object:</p>
 <pre><code class="javascript">var book = new Book({
-	title: "Robot Dreams",
-	author: "Isaac Asimov",
-	numPages: 320
+	title: "Middlemarch",
+	author: "George Eliot",
+	numPages: 736
 });</code></pre>
 				</section>
 
@@ -297,17 +328,17 @@ paperback.burn();</code></pre>
 }
 
 var book = new Book({
-	title: "Robot Dreams",
-	numPages: 320
+	title: "In the Woods",
+	numPages: 464
 });</code></pre>
 				</section>
 
 				<section>
 					<h3>Let's Develop It!</h3>
-					<p>Building on the exercise from last time, comment out the <code>MusicVideo</code> code.</p>
-					<p>Change the <code>Video</code> constructor function to accept an object literal instead of multiple arguments.</p>
+					<p>Building on the exercise from last time, comment out the <code>Hardcover</code> code.</p>
+					<p>Change the <code>Book</code> constructor function to accept an object literal instead of multiple arguments.</p>
 					<p>Define a default value for every property.</p>
-					<p>Finally, instantiate a new <code>Video</code> object and call the <code>watch()</code> method on it.</p>
+					<p>Finally, instantiate a new <code>Book</code> object and call the <code>read()</code> function on it.</p>
 				</section>
 
 				<section>
