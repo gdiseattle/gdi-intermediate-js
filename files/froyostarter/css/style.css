@@ -1,0 +1,81 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body {
+	color: #333;
+	font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.masthead {
+	background: #f05b62;
+	border-bottom: 1px solid #ed3c44;
+	color: white;
+	padding: 1rem 2rem;
+}
+
+.masthead h1 {
+	font-weight: normal;
+	font-size: 3rem;
+}
+
+#machine {
+	background: #f6f6f6;
+	border: 1px solid #e5e5e5;
+	margin: 2rem auto;
+	padding: 1rem;
+	width: 50%;
+}
+
+#machine:after {
+	clear: both;
+	content: '';
+	display: table;
+}
+
+#power {
+	cursor: pointer;
+	float: left;
+	margin-right: 1rem;
+}
+
+.btn {
+	background: gray;
+	border: 2px solid white;
+	border-radius: 5px;
+	cursor: pointer;
+	float: left;
+	font-size: 1rem;
+	font-weight: bold;
+	margin-right: 1rem;
+	padding: 0.5rem 1rem;
+}
+
+#vanilla {
+	background: #f3e5ab;
+	border-color: #f1e09c;
+}
+
+#chocolate {
+	background: #4E2E28;
+	color: white;
+	border-color: #432722;
+}
+
+#strawberry {
+	background: #FC5A8D;
+	border-color: #fc4981;
+}
+
+#dispenser {
+	background: white;
+	border: 1px solid #e5e5e5;
+	clear: both;
+	height: 271px;
+	margin: 2rem auto;
+	width: 256px;
+}
+
+#dispenser img {
+	display: block;
+}

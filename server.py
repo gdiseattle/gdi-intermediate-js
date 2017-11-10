@@ -36,7 +36,7 @@ def main(port):
     HandlerClass.protocol_version = Protocol
     httpd = ServerClass((SERVER_ADDRESS, port), HandlerClass)
     sa = httpd.socket.getsockname()
-    print "Serving HTTP on", sa[0], "port", sa[1], "..."
+    print ("Serving HTTP on", sa[0], "port", sa[1], "...")
     httpd.serve_forever()
 
 
