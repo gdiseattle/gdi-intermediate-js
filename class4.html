@@ -191,7 +191,7 @@ body.appendChild(p);</code></pre>
 				<section>
 					<h3>The <code>XMLHttpRequest</code> object</h3>
 					<ul>
-						<li>A native JavaScript object that can communicate <strong>asynchronously</strong> between the client and the server.</li>
+						<li>A native JavaScript object that can communicate <span class="blue">asynchronously</span> between the client and the server.</li>
 						<li>To use it, we create a new instance of the object:
 <pre><code class="javascript">var request = new XMLHttpRequest();</code></pre>
 						</li>
@@ -383,9 +383,7 @@ XMLHttpRequest.open(method, url, async, user, password)
 				<section>
 					<h3>The <code>send()</code> method</h3>
 					<p>Once your request is prepped by the <code>open()</code> method, it's ready to be sent!</p>
-<pre><code class="javascript">XMLHttpRequest.send(body)</code>
-
-</pre>
+<pre><code class="javascript">XMLHttpRequest.send(body)</code></pre>
 				</section>
 
 				<section>
@@ -400,11 +398,15 @@ if(request) {
 	request.send();
 }</code></pre>
 					<p>Here's a <a href="files/me.json">me.json</a> file you can include in your project to call.</p>
+					<p>
+						Here is a link to the <a href="https://gist.githubusercontent.com/kcjonesevans/25d86771f45b4f4fc61f92185c473404/raw/28c65580c775243e7adb4851611c7923e233c04c/me.json" target="_blank">gist</a>
+					</p>
 					<p><a href="http://bit.ly/intermediate-js-class4-xmlhttprequest" target="_blank">http://bit.ly/intermediate-js-class4-xmlhttprequest</a></p>
 				</section>
 
 				<section>
-					<h3>Using Ready State to debug</h3>
+					<h3>The <code>readyState</code> property</h3>
+					<p>Indicates the current state of the Ajax request. Possible values:</p>
 					<img src="img/readystate.png" width="1136" alt="">
 				</section>
 
@@ -417,6 +419,7 @@ if(request) {
 						<li>Name of the header (string)</li>
 						<li>Value of the header (string)</li>
 					</ol>
+<pre><code class="javascript">XMLHttpRequest.setRequestHeader(header, value);</code></pre>
 				</section>
 
 				<section>
@@ -440,12 +443,18 @@ if(request) {
 	request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 	request.send('name=Natalie+MacLees&message=JavaScript+is+awesome%21');
 }</code></pre>
+				<p>
+					<a href="http://bit.ly/intermediate-js-class4-post" target="_blank">http://bit.ly/intermediate-js-class4-post</a>
+				</p>
+				<p>
+					This code won't work with simpleserver (which does not support POST)
+				</p>
 				</section>
 
 				<section>
 					<h3>Let's Develop It!</h3>
 					<p>In your project folder, create a simple <code>.txt</code> file with a sentence of plain text in it.</p>
-					<p>Next, set up a new XHR object and get the file. Use the console tools to view the request.</p>
+					<p>Next, set up a new XMLHttpRequest (XHR) object and get the file. Use the console tools to view the request.</p>
 				</section>
 
 				<section>
@@ -456,13 +465,8 @@ if(request) {
 				<section>
 					<h3>The <code>readyState</code> property</h3>
 					<p>Indicates the current state of the Ajax request. Possible values:</p>
-					<ul>
-						<li><code>0</code> - Uninitialized. The open method hasn't been called yet.</li>
-						<li><code>1</code> - Loading. The open method has been called.</li>
-						<li><code>2</code> - Loaded. The send method has been called - the request has begun</li>
-						<li><code>3</code> - Interactive. The server is working on it</li>
-						<li><code>4</code> - Complete. The server sent a response.</li>
-					</ul>
+					<img src="img/readystate.png" width="1136" alt="">
+
 				</section>
 
 				<section>
@@ -489,6 +493,9 @@ if(request) {
 	request.send();
 }</code></pre>
 					<p><code>doSomething()</code> gets called every time the value of the <code>readyState</code> property changes, but our <code>if</code> statement ensures nothing will happen unless the value is <code>4</code>.</p>
+					<p>
+						<a href="http://bit.ly/intermediate-js-class4-readystate" target="_blank">http://bit.ly/intermediate-js-class4-readystate</a>
+					</p>
 				</section>
 
 				<section>
@@ -553,6 +560,9 @@ if(request) {
 				<section>
 					<h3>Putting it all together</h3>
 					<p>Let's step through fetching some information from the server with ajax and displaying it on our page.</p>
+					<p>
+						<a href="http://bit.ly/intermediate-js-class4-all" target="_blank">http://bit.ly/intermediate-js-class4-all</a>
+					</p>
 				</section>
 
 				<section>
@@ -620,12 +630,12 @@ if (request) {
 
 				<section>
 					<h3>Survey</h3>
-					<p>Survey info and links</p>
+					<p>Survey info and links in <a href="https://gdidayton.slack.com" target="_blank">slack</a>.</p>
 				</section>
 
 				<section>
 					<h3>Thank you!</h3>
-					<p>As you keep working with JavaScript, if you have questions or get stuck, post in our <a href="http://facebook.com/groups/gdila">Facebook group</a> and we'll help you out!.</p>
+					<p>As you keep working with JavaScript, if you have questions or get stuck, post in our <a href="https://gdidayton.slack.com">slack</a> and we'll help you out!.</p>
 				</section>
 			</div>
 			<footer>
