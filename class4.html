@@ -146,8 +146,8 @@ body.appendChild(p);</code></pre>
 					<img src="img/wild-ajax.png" height="880" width="1136" alt="">
 					<aside class="notes">
 						<ul>
+							<li>Let's look at an example of AJAX</li>
 							<li>show example of ajax calls in console. <a href="https://twitter.com/gdidayton" target="_blank">https://twitter.com/gdidayton</a></li>
-
 							<li>Open the dev tools, go to network tab</li>
 							<li>Sort by XHR</li>
 							<li>find something with a json</li>
@@ -177,12 +177,21 @@ body.appendChild(p);</code></pre>
 				<section>
 					<h3>The <code>XMLHttpRequest</code> object</h3>
 					<ul>
-						<li>A native JavaScript object that can communicate asynchronously between the client and the server.</li>
+						<li>A native JavaScript object that can communicate <strong>asynchronously</strong> between the client and the server.</li>
 						<li>To use it, we create a new instance of the object:
 <pre><code class="javascript">var request = new XMLHttpRequest();</code></pre>
 						</li>
 						<li>...and then use the properties and methods of that object to make an ajax call</li>
 					</ul>
+					<p class="fragment"></br>
+						<strong>Asynchronous</strong> means you can move on to another task before it finishes, while <strong>synchronous</strong> means you wait for it to finish before moving on to another task.
+					</p>
+
+					<aside class="notes">
+						Make note of asynchronous v. syncronous. How this will be important
+						for waiting for your data to return.
+
+					</aside>
 				</section>
 
 				<section>
@@ -193,6 +202,13 @@ body.appendChild(p);</code></pre>
 						<li>The <code>open()</code> method</li>
 						<li>The <code>send()</code> method</li>
 					</ol>
+					<p></br>
+						<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest" target="_blank">Check out the documentation for XMLHttpRequest</a>
+					</p>
+					<aside class="notes">
+						These are talked about on the next slides
+					</aside>
+
 				</section>
 
 				<section>
@@ -202,6 +218,11 @@ body.appendChild(p);</code></pre>
 						<li class="fragment">Each time the <code>readyState</code> property is changed, the <code>readystatechange</code> event is fired.</li>
 						<li class="fragment">If you add an event listener function to the <code>readystatechange</code> event, your function will execute each time the server pings the client with an update.</li>
 					</ul>
+					<aside class="notes">
+						<li>Each time the <code>document.readyState</code> property is changed, the <code>readystatechange</code> event is fired.</li>
+						<li>If you add an event listener function to the <code>readystatechange</code> event, your function will execute each time the server pings the client with an update.</li>
+
+					</aside>
 				</section>
 
 				<section>
@@ -213,6 +234,9 @@ if(request) {
 		console.log(request.readyState);
 	});
 }</code></pre>
+					<aside class="notes">
+						This code doesn't do anything right now. Since there are no state changes
+					</aside>
 				</section>
 
 				<section>
@@ -223,12 +247,35 @@ if(request) {
 							<li>The type of request (string)</li>
 							<li>The location of the file on the server (string)</li>
 						</ol>
-						<p>&nbsp;</p>
-						<p>And an additional optional argument:</p>
-						<ol>
-							<li>Whether or not the request should be asynchronous (Boolean)</li>
-						</ol>
+<pre><code class="javascript">XMLHttpRequest.open(method, url)
+XMLHttpRequest.open(method, url, async)
+XMLHttpRequest.open(method, url, async, user)
+XMLHttpRequest.open(method, url, async, user, password)
+							</code></pre>
+						<div class="fragment">
+							<p > And an additional optional argument:</p>
+							<ol>
+								<li>Whether or not the request should be asynchronous (Boolean)</li>
+							</ol>
 					</div>
+					</div>
+
+					<aside class="notes">
+						<div class="left-align">
+							<p>The <code>open()</code> method takes two required arguments:</p>
+							<ol>
+								<li>The type of request (string)</li>
+								<li>The location of the file on the server (string)</li>
+							</ol>
+
+							<span >
+							<p>And an additional optional argument:</p>
+							<ol>
+								<li>Whether or not the request should be asynchronous (Boolean)</li>
+							</ol></span>
+						</div>
+					</aside>
+
 				</section>
 
 				<section>
@@ -262,8 +309,8 @@ if(request) {
 
 				<section>
 					<h3>Cross Domain Policy</h3>
-					<p>If we're on this page:</p>
-					<p>http://store.company.com/dir/page.html</p>
+					<h4>or Same-Origin Policy</h4>
+					<p>If we're on this page: <a>http://store.company.com/dir/page.html</a></p>
 					<p>Here's how these ajax requests will work out:</p>
 					<table>
 						<thead>
@@ -306,6 +353,9 @@ if(request) {
 							</tr>
 						</tbody>
 					</table>
+					<p class="fragment">
+						This is to prevent malicious scripts from running on the page.
+					</p>
 				</section>
 
 				<section>
@@ -313,13 +363,15 @@ if(request) {
 					<p>Indicates whether the request should occur asynchronously or not.</p>
 					<p>If <code>true</code>, the script will make the request and won't wait for the response from the server before moving on to the rest of the script.</p>
 					<p>If <code>false</code>, the browser will stop processing the script until the ajax request is completed.</p>
-					<p>&nbsp;</p>
-					<p>Use <code>true</code>!</p>
+					<h4>Use <code>true</code>!</h4>
 				</section>
 
 				<section>
 					<h3>The <code>send()</code> method</h3>
 					<p>Once your request is prepped by the <code>open()</code> method, it's ready to be sent!</p>
+<pre><code class="javascript">XMLHttpRequest.send(body)</code>
+
+</pre>
 				</section>
 
 				<section>
