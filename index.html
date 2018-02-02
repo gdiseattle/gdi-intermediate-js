@@ -1,133 +1,79 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 
-		<title>JavaScript 201: Intermediate JavaScript</title>
+    <title>Intermediate JavaScript - Girl Develop It</title>
 
-		<meta name="description" content="Girl Develop It framework for easily creating beautiful presentations using HTML in GDI theme. Forked from Hakim El Hattab's reveal.js">
-		<meta name="author" content="Girl Develop It">
+    <meta name="description" content="This is the Girl Develop It Intermediate JavaScript course. The course is meant to be taught in 4 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
+    <meta name="author" content="Girl Develop It">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+    <link rel="stylesheet" href="css/classlinks.css">
+  </head>
 
-		<!-- For syntax highlighting -->
-		<!-- light editor --><link rel="stylesheet" href="lib/css/light.css">
-		<!-- dark editor <link rel="stylesheet" href="lib/css/dark.css">-->
-		<!-- <link rel="stylesheet" href="lib/css/zenburn.css"> -->
+    <body>
 
-		<link rel="stylesheet" href="plugin/accessibility-helper/css/accessibility-helper.css">
+        <div class="classlinks">
 
-		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
-		<script>
-			if( window.location.search.match( /print-pdf/gi ) ) {
-				var link = document.createElement( 'link' );
-				link.rel = 'stylesheet';
-				link.type = 'text/css';
-				link.href = 'css/print/pdf.css';
-				document.getElementsByTagName( 'head' )[0].appendChild( link );
-			}
-		</script>
+            <header>
+                <img src="img/gdi-logo.png" class="gdi-dayton-logo" alt="GDI Seattle">
+                <h1>Intermediate to JavaScript</h1>
 
-		<!-- If use the PDF print sheet so students can print slides-->
+                <p>Use these links as a reference throughout the class.</p>
+                <p><a href="https://codepen.io/collection/AygMPm/" target="_blank">CodePen collection of all examples for this course</a></p>
+            </header>
+            <section class="lists">
+                <div class="column">
+                    <h2>Class 1: Variables, Arrays, and Objects</h2>
+                    <ul>
+                        <li><a href="class1.html" target="_blank">Class 1 Slides</a></li>
+                        <li><a href="files/exercise-arrayofobjects.html">Class 1 Homework: Array of Objects</a></li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide" target="_blank">JavaScript Guide</a></li>
+                        <!-- <li><a href="http://www.codecademy.com/tracks/javascript" target="_blank">Code Academy</a></li> -->
+                        <!-- <li><a href="http://jsforcats.com/" target="_blank">JavaScript For Cats,</a></li> -->
+                    </ul>
+                </div>
 
-		<link rel="stylesheet" href="css/print/pdf.css" type="text/css" media="print">
-		<link rel="icon" type="image/x-icon" href="favicon.ico" />
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+                <div class="column">
+                    <h2>Class 2: Functions, DOM, and Events</h2>
+                    <ul>
+                        <li><a href="class2.html" target="_blank">Class 2 Slides</a></li>
+                        <li><a href="files/exercise-functionobject.html" target="_blank">Function are objects too practice</a></li>
+                        <li><a href="class2.html#/56" target="_blank">End of Class Exercise</a></li>
+                        <li><a href="class2.html#/58" target="_blank">Class 2 Homework: Setting up a server!</a></li>
+                    </ul>
+                </div>
 
-	<body>
+                <div class="column">
+                    <h2>Class 3: OOP: Object-Oriented Programming</h2>
+                    <ul>
+                        <li><a href="class3.html" target="_blank">Class 3 Slides</a></li>
+                        <!-- <li><a href="homework3.html" target="_blank">Class 3 Homework</a></li> -->
+                    </ul>
+                </div>
 
-		<div class="reveal">
+                <div class="column">
+                    <h2>Class 4: JSON and Ajax</h2>
+                    <ul>
+                        <li><a href="class4.html" target="_blank">Class 4 Slides</a></li>
+                        <!-- <li><a href="files/exercise-localserver.html" target="_blank">Local File Server</a></li> -->
+                        <!-- <li><a href="files/exercise-ajaxvideoplayer.html" target="_blank">Video Player</a></li> -->
+                        <!-- <a href="http://jsonlint.com/" target="_blank">JSONlint.com</a> -->
+                    </ul>
+                </div>
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<!-- Opening -->
-				<section>
-					<img src="img/circle-gdi-logo.png" alt="GDI Logo" class="noborder"/>
-					<h1>JavaScript 201</h1>
-					<h2>Intermediate JavaScript</h2>
-					<p>
-						<small>View the slides at <a href ="https://github.com/gdila/intermediate-js">gdila.org/js201</a>.</small>
-					</p>
-				</section>
+            </section>
+            <footer>
+                <div class="copyright">
+                    Intro to JavaScript &mdash; Girl Develop It &mdash;
+                    <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US" target="_blank"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+                </div>
+            </footer>
+        </div>
 
-				<!-- Wifi and links -->
-				<section>
-					<h3>JavaScript 201</h3>
-					<p>Wifi network: Build With Code</p>
-					<p>Wifi password: ilovetesting</p>
-					<p>&nbsp;</p>
-					<h3>Class Slides</h3>
-					<p><a href="http://gdila.org/js201">gdila.org/js201</a></p>
-				</section>
-
-				<section>
-					<ul>
-						<li>
-							<a href="class1.html">Class 1</a>
-							<p>Variables, Arrays, and Objects</p>
-						</li>
-						<li>
-							<a href="class2.html">Class 2</a>
-							<p>Functions, DOM, and Events</p>
-						</li>
-						<li>
-							<a href="class3.html">Class 3</a>
-							<p>OOP: Object-Oriented Programming</p>
-						</li>
-						<li>
-							<a href="class4.html">Class 4</a>
-							<p>JSON and Ajax</p>
-						</li>
-					</ul>
-				</section>
-
-
-			</div>
-			<footer>
-				<div class="copyright">
-					JavaScript 201 -- Los Angeles --
-					<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
-				</div>
-			</footer>
-		</div>
-
-
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
-
-		<script>
-
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-						Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
-
-				transition: 'slide', // none/fade/slide/convex/concave/zoom
-
-				// Optional reveal.js plugins
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true },
-										{ src: 'plugin/accessibility-helper/js/accessibility-helper.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
-
-		</script>
-
-	</body>
+  </body>
 </html>

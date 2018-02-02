@@ -50,6 +50,9 @@
 			<div class="slides">
 				<!-- AJAX and JSON -->
 				<section>
+					<h1>JSON & AJAX</h1>
+				</section>
+				<section>
 					<h3>JSON</h3>
 					<ul>
 						<li class="fragment">JSON = JavaScript Object Notation</li>
@@ -57,8 +60,18 @@
 						<li class="fragment">Keys must be stored in quotes</li>
 						<li class="fragment">Values can be Number, String, Boolean, Array, Object or null</li>
 						<li class="fragment">Resembles objects, hash tables, or structs of programming languages</li>
-						<li class="fragment">Can be validated at <a href="http://jsonlint.com/">JSONlint.com</a></li>
+						<li class="fragment">Can be validated at <a href="http://jsonlint.com/" target="_blank">JSONlint.com</a></li>
 					</ul>
+					<aside class="notes">
+						<ul>
+							<li>JSON = JavaScript Object Notation</li>
+							<li>A set of key/value pairs</li>
+							<li>Keys must be stored in quotes</li>
+							<li>Values can be Number, String, Boolean, Array, Object or null</li>
+							<li>Resembles objects, hash tables, or structs of programming languages</li>
+							<li>Can be validated at <a href="http://jsonlint.com/" target="_blank">JSONlint.com</a></li>
+						</ul>
+					</aside>
 				</section>
 
 				<section>
@@ -76,6 +89,15 @@
 		"212 732-1234",
 		"646 123-4567" ]
 }</code></pre>
+
+				<aside class="notes">
+					<ul>
+						<li>Notice the "" for all the attribute names</li>
+						<li>JSON supports two widely used (amongst programming languages) data structures:</li>
+						<li>A <strong>collection of name/value pairs.</strong></li>
+						<li>An ordered list of values</li>
+						<li>Since data structure supported by JSON is also supported by most of the modern programming languages data-interchange format.</li>
+				</aside>
 				</section>
 
 				<section>
@@ -92,11 +114,27 @@ p.innerHTML += 'My cats are ' + myProfile.cats.join(' and ') + '.';
 
 var body = document.getElementsByTagName('body')[0];
 body.appendChild(p);</code></pre>
+				<a href="http://bit.ly/intermediate-js-json-dom" target="_blank">http://bit.ly/intermediate-js-json-dom</a>
 				</section>
 
 				<section>
 					<h3>Let's Develop It!</h3>
 					<p><a href="files/exercise-videoplayer.html" target="_new">Exercise instructions</a></p>
+					<p><a href="http://bit.ly/intermediate-js-class-4-ex-1" target="_blank">http://bit.ly/intermediate-js-class-4-ex-1</a></p>
+					<p>
+						Note: to get json files in your codepen.io
+						<ol>
+							<li>
+								Open Settings
+							</li>
+							<li>
+								Go to JavaScript
+							</li>
+							<li>
+								Add the url to "Add External JavaScript"
+							</li>
+						</ol>
+					</p>
 				</section>
 
 				<section>
@@ -108,11 +146,30 @@ body.appendChild(p);</code></pre>
 					<h3>Ajax</h3>
 					<p>Asynchronous JavaScript And "XML"</p>
 					<img src="img/ajax.png" height="400" width="600" alt="">
+					<aside class="notes">
+						<ul>
+							<li>Client is your machine/browser</li>
+							<li>JavaScript</li>
+							<li>Eventhandler is our listener</li>
+							<li>Callback function we write</li>
+							<li>Manipulates the DOM elements on the webpage</li>
+							<li>During our event handling we can call out to the server with <strong>XMLHttpRequest</strong></li>
+					 </ul>
+					</aside>
 				</section>
 
 				<section>
 					<h3>Ajax in the wild</h3>
 					<img src="img/wild-ajax.png" height="880" width="1136" alt="">
+					<aside class="notes">
+						<ul>
+							<li>Let's look at an example of AJAX</li>
+							<li>show example of ajax calls in console. <a href="https://twitter.com/gdiseattle" target="_blank">https://twitter.com/gdiseattle</a></li>
+							<li>Open the dev tools, go to network tab</li>
+							<li>Sort by XHR</li>
+							<li>find something with a json</li>
+						</ul>
+					</aside>
 				</section>
 
 				<section>
@@ -121,16 +178,37 @@ body.appendChild(p);</code></pre>
 					<p>If you haven't already, get a local server running.</p>
 					<p><a href="files/exercise-localserver.html" target="_new">Local Server Help</a></p>
 				</section>
+				<section>
+					<h3>Local server</h3>
+					<ol>
+						<li>Open Terminal</li>
+						<li>Navigate to your project directory. You can do this using the <code>cd</code> command in the terminal.</li>
+						<li>Run this command: <code>python -m SimpleHTTPServer</code>
+							<ul><li>If you are running Python 3, run this command instead: <code>python -m http.server 8000</code></li></ul>
+						</li>
+						<li>If successful, you should then be able to access your project folder by pointing your browser to http://localhost:8000</li>
+					</ol>
+					<p><a href="files/exercise-localserver.html" target="_new">Local Server Help</a></p>
+				</section>
 
 				<section>
 					<h3>The <code>XMLHttpRequest</code> object</h3>
 					<ul>
-						<li>A native JavaScript object that can communicate asynchronously between the client and the server.</li>
+						<li>A native JavaScript object that can communicate <span class="blue">asynchronously</span> between the client and the server.</li>
 						<li>To use it, we create a new instance of the object:
 <pre><code class="javascript">var request = new XMLHttpRequest();</code></pre>
 						</li>
 						<li>...and then use the properties and methods of that object to make an ajax call</li>
 					</ul>
+					<p class="fragment"></br>
+						<strong>Asynchronous</strong> means you can move on to another task before it finishes, while <strong>synchronous</strong> means you wait for it to finish before moving on to another task.
+					</p>
+
+					<aside class="notes">
+						Make note of asynchronous v. syncronous. How this will be important
+						for waiting for your data to return.
+
+					</aside>
 				</section>
 
 				<section>
@@ -141,6 +219,13 @@ body.appendChild(p);</code></pre>
 						<li>The <code>open()</code> method</li>
 						<li>The <code>send()</code> method</li>
 					</ol>
+					<p></br>
+						<a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest" target="_blank">Check out the documentation for XMLHttpRequest</a>
+					</p>
+					<aside class="notes">
+						These are talked about on the next slides
+					</aside>
+
 				</section>
 
 				<section>
@@ -150,6 +235,11 @@ body.appendChild(p);</code></pre>
 						<li class="fragment">Each time the <code>readyState</code> property is changed, the <code>readystatechange</code> event is fired.</li>
 						<li class="fragment">If you add an event listener function to the <code>readystatechange</code> event, your function will execute each time the server pings the client with an update.</li>
 					</ul>
+					<aside class="notes">
+						<li>Each time the <code>document.readyState</code> property is changed, the <code>readystatechange</code> event is fired.</li>
+						<li>If you add an event listener function to the <code>readystatechange</code> event, your function will execute each time the server pings the client with an update.</li>
+
+					</aside>
 				</section>
 
 				<section>
@@ -161,6 +251,9 @@ if(request) {
 		console.log(request.readyState);
 	});
 }</code></pre>
+					<aside class="notes">
+						This code doesn't do anything right now. Since there are no state changes
+					</aside>
 				</section>
 
 				<section>
@@ -171,12 +264,35 @@ if(request) {
 							<li>The type of request (string)</li>
 							<li>The location of the file on the server (string)</li>
 						</ol>
-						<p>&nbsp;</p>
-						<p>And an additional optional argument:</p>
-						<ol>
-							<li>Whether or not the request should be asynchronous (Boolean)</li>
-						</ol>
+<pre><code class="javascript">XMLHttpRequest.open(method, url)
+XMLHttpRequest.open(method, url, async)
+XMLHttpRequest.open(method, url, async, user)
+XMLHttpRequest.open(method, url, async, user, password)
+							</code></pre>
+						<div class="fragment">
+							<p > And an additional optional argument:</p>
+							<ol>
+								<li>Whether or not the request should be asynchronous (Boolean)</li>
+							</ol>
 					</div>
+					</div>
+
+					<aside class="notes">
+						<div class="left-align">
+							<p>The <code>open()</code> method takes two required arguments:</p>
+							<ol>
+								<li>The type of request (string)</li>
+								<li>The location of the file on the server (string)</li>
+							</ol>
+
+							<span >
+							<p>And an additional optional argument:</p>
+							<ol>
+								<li>Whether or not the request should be asynchronous (Boolean)</li>
+							</ol></span>
+						</div>
+					</aside>
+
 				</section>
 
 				<section>
@@ -224,8 +340,8 @@ if(request) {
 
 				<section>
 					<h3>Cross Domain Policy</h3>
-					<p>If we're on this page:</p>
-					<p>http://store.company.com/dir/page.html</p>
+					<h4>or Same-Origin Policy</h4>
+					<p>If we're on this page: <a>http://store.company.com/dir/page.html</a></p>
 					<p>Here's how these ajax requests will work out:</p>
 					<table>
 						<thead>
@@ -268,6 +384,9 @@ if(request) {
 							</tr>
 						</tbody>
 					</table>
+					<p class="fragment">
+						This is to prevent malicious scripts from running on the page.
+					</p>
 				</section>
 
 				<section>
@@ -275,13 +394,13 @@ if(request) {
 					<p>Indicates whether the request should occur asynchronously or not.</p>
 					<p>If <code>true</code>, the script will make the request and won't wait for the response from the server before moving on to the rest of the script.</p>
 					<p>If <code>false</code>, the browser will stop processing the script until the ajax request is completed.</p>
-					<p>&nbsp;</p>
-					<p>Use <code>true</code>!</p>
+					<h4>Use <code>true</code>!</h4>
 				</section>
 
 				<section>
 					<h3>The <code>send()</code> method</h3>
 					<p>Once your request is prepped by the <code>open()</code> method, it's ready to be sent!</p>
+<pre><code class="javascript">XMLHttpRequest.send(body)</code></pre>
 				</section>
 
 				<section>
@@ -296,6 +415,16 @@ if(request) {
 	request.send();
 }</code></pre>
 					<p>Here's a <a href="files/me.json">me.json</a> file you can include in your project to call.</p>
+					<p>
+						Here is a link to the <a href="https://gist.githubusercontent.com/kcjonesevans/25d86771f45b4f4fc61f92185c473404/raw/28c65580c775243e7adb4851611c7923e233c04c/me.json" target="_blank">gist</a>
+					</p>
+					<p><a href="http://bit.ly/intermediate-js-class4-xmlhttprequest" target="_blank">http://bit.ly/intermediate-js-class4-xmlhttprequest</a></p>
+				</section>
+
+				<section>
+					<h3>The <code>readyState</code> property</h3>
+					<p>Indicates the current state of the Ajax request. Possible values:</p>
+					<img src="img/readystate.png" width="1136" alt="">
 				</section>
 
 				<section>
@@ -307,6 +436,7 @@ if(request) {
 						<li>Name of the header (string)</li>
 						<li>Value of the header (string)</li>
 					</ol>
+<pre><code class="javascript">XMLHttpRequest.setRequestHeader(header, value);</code></pre>
 				</section>
 
 				<section>
@@ -330,12 +460,18 @@ if(request) {
 	request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 	request.send('name=Natalie+MacLees&message=JavaScript+is+awesome%21');
 }</code></pre>
+				<p>
+					<a href="http://bit.ly/intermediate-js-class4-post" target="_blank">http://bit.ly/intermediate-js-class4-post</a>
+				</p>
+				<p>
+					This code won't work with simpleserver (which does not support POST)
+				</p>
 				</section>
 
 				<section>
 					<h3>Let's Develop It!</h3>
 					<p>In your project folder, create a simple <code>.txt</code> file with a sentence of plain text in it.</p>
-					<p>Next, set up a new XHR object and get the file. Use the console tools to view the request.</p>
+					<p>Next, set up a new XMLHttpRequest (XHR) object and get the file. Use the console tools to view the request.</p>
 				</section>
 
 				<section>
@@ -346,13 +482,8 @@ if(request) {
 				<section>
 					<h3>The <code>readyState</code> property</h3>
 					<p>Indicates the current state of the Ajax request. Possible values:</p>
-					<ul>
-						<li><code>0</code> - Uninitialized. The open method hasn't been called yet.</li>
-						<li><code>1</code> - Loading. The open method has been called.</li>
-						<li><code>2</code> - Loaded. The send method has been called - the request has begun</li>
-						<li><code>3</code> - Interactive. The server is working on it</li>
-						<li><code>4</code> - Complete. The server sent a response.</li>
-					</ul>
+					<img src="img/readystate.png" width="1136" alt="">
+
 				</section>
 
 				<section>
@@ -379,6 +510,9 @@ if(request) {
 	request.send();
 }</code></pre>
 					<p><code>doSomething()</code> gets called every time the value of the <code>readyState</code> property changes, but our <code>if</code> statement ensures nothing will happen unless the value is <code>4</code>.</p>
+					<p>
+						<a href="http://bit.ly/intermediate-js-class4-readystate" target="_blank">http://bit.ly/intermediate-js-class4-readystate</a>
+					</p>
 				</section>
 
 				<section>
@@ -443,6 +577,9 @@ if(request) {
 				<section>
 					<h3>Putting it all together</h3>
 					<p>Let's step through fetching some information from the server with ajax and displaying it on our page.</p>
+					<p>
+						<a href="http://bit.ly/intermediate-js-class4-all" target="_blank">http://bit.ly/intermediate-js-class4-all</a>
+					</p>
 				</section>
 
 				<section>
@@ -509,19 +646,13 @@ if (request) {
 				</section>
 
 				<section>
-					<h3>Survey</h3>
-					<p>We strive to make every class better than the last. We rely on your honest feedback to make our classes better. Please take a moment to complete the <a href="https://goo.gl/forms/iuW3ub22NZ566Vrl1">survey</a> for this class.</p>
-					<p><a href="https://goo.gl/forms/iuW3ub22NZ566Vrl1">Take the survey</a></p>
-				</section>
-
-				<section>
 					<h3>Thank you!</h3>
-					<p>As you keep working with JavaScript, if you have questions or get stuck, post in our <a href="http://facebook.com/groups/gdila">Facebook group</a> and we'll help you out!.</p>
+					<p>As you keep working with JavaScript, if you have questions or get stuck, post in our <a href="https://gdiseattle.slack.com">slack</a> and we'll help you out!.</p>
 				</section>
 			</div>
 			<footer>
 				<div class="copyright">
-					Intermediate JavaScript -- Los Angeles --
+					JavaScript 201 -- Seattle --
 					<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
 				</div>
 			</footer>
