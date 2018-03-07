@@ -164,7 +164,7 @@ body.appendChild(p);</code></pre>
 					<aside class="notes">
 						<ul>
 							<li>Let's look at an example of AJAX</li>
-							<li>show example of ajax calls in console. <a href="https://twitter.com/gdidayton" target="_blank">https://twitter.com/gdidayton</a></li>
+							<li>show example of ajax calls in console. <a href="https://twitter.com/gdiseattle" target="_blank">https://twitter.com/gdiseattle</a></li>
 							<li>Open the dev tools, go to network tab</li>
 							<li>Sort by XHR</li>
 							<li>find something with a json</li>
@@ -213,7 +213,7 @@ body.appendChild(p);</code></pre>
 
 				<section>
 					<h3>Getting ready to communicate</h3>
-					<p>Now that we've created an instance of the XHR object, it needs to be prepped for communition. That requires three things:</p>
+					<p>Now that we've created an instance of the XHR object, it needs to be prepped for communication. That requires three things:</p>
 					<ol>
 						<li>The <code>readystatechange</code> event handler</li>
 						<li>The <code>open()</code> method</li>
@@ -294,6 +294,20 @@ XMLHttpRequest.open(method, url, async, user, password)
 					</aside>
 
 				</section>
+
+				<section>
+					<h3>The <code>open()</code> method</h3>
+<pre><code class="javascript">var request = new XMLHttpRequest();
+
+if(request) {
+	request.addEventListener('readystatechange', function(){
+		console.log(request.readyState);
+	});
+	request.open('GET', 'me.json', true);
+}</code></pre>
+					<p>Here's a <a href="files/me.json">me.json</a> file you can include in your project to call.</p>
+				</section>
+
 
 				<section>
 					<h3>Request types: <code>GET</code> and <code>POST</code></h3>
@@ -632,18 +646,13 @@ if (request) {
 				</section>
 
 				<section>
-					<h3>Survey</h3>
-					<p>Survey info and links in <a href="https://gdidayton.slack.com" target="_blank">slack</a>.</p>
-				</section>
-
-				<section>
 					<h3>Thank you!</h3>
-					<p>As you keep working with JavaScript, if you have questions or get stuck, post in our <a href="https://gdidayton.slack.com">slack</a> and we'll help you out!.</p>
+					<p>As you keep working with JavaScript, if you have questions or get stuck, post in our <a href="https://gdiseattle.slack.com">slack</a> and we'll help you out!.</p>
 				</section>
 			</div>
 			<footer>
 				<div class="copyright">
-					JavaScript 201 -- Dayton --
+					Intermediate JavaScript -- GDI Seattle --
 					<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
 				</div>
 			</footer>

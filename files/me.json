@@ -3,11 +3,11 @@
 	"lastName": "Smith",
 	"address": {
 		"streetAddress": "425 2nd Street",
-		"city": "San Francisco",
-		"state": "CA",
-		"postalCode": 94107
+		"city": "Seattle",
+		"state": "WA",
+		"postalCode": 98103
 	},
 	"phoneNumbers": [
-		"212 732-1234",
+		"206 732-1234",
 		"646 123-4567" ]
 }

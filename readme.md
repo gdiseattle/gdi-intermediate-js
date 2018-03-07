@@ -1,25 +1,27 @@
-# GDI Dayton Intermediate JavaScript
+# GDI Seattle Intermediate JavaScript - Forked from GDI Seattle
 
-Slides and materials are hosted at [https://gdidayton.github.io/gdi-intermediate-js](https://gdidayton.github.io/gdi-intermediate-js).
+Slides and materials are hosted at [https://gdiseattle.github.io/gdi-intermediate-js](https://gdiseattle.github.io/gdi-intermediate-js).
 
 ## Course description
 
-Take your JavaScript skills to the next level with this class, which will build on skills learned in JavaScript 101 and take those skills to new and deeper levels.
+Take your JavaScript skills to the next level with this class, which will build on skills learned in Intro to Javascript and take those skills to new and deeper levels.
 
 **Cost: $80**
 
-**Dates: Nov 4 and Nov 11, 2017**
+**Dates:**
+ - Wednesday, March 7th
+ - Wednesday, March 14th
+ - Wednesday, March 21th
+ - Wednesday, March 28th
 
-**Time: 9AM - 1PM**
+**Time: 6:30pm - 8:30pm**
 
-**Location: Sparkbox**
+**Location: [Substantial](https://goo.gl/maps/HroHZSaKRRs)**
 
-A limited number of scholarships are available for those with a financial hardship. To apply, contact us at...
+A limited number of scholarships are available for those with a financial hardship. To apply, contact us at seattle@girldevelopit.com
 
 
 ### Prerequisites:
-
-List any prerequisites for this class, including any previous classes or the equivalent self-study or real-world skills.
 
 You should have:
 
@@ -37,10 +39,10 @@ You should have:
 
 ### Topics covered:
 
- - Variables, including scope, local variables, global variables, and the this keyword. This is a review and a deeper dive into variables than we covered in 101
- - Arrays, including join, map, and filter functions. Again, this is a review and then a deeper dive than covered in 101
+ - Variables, including scope, local variables, global variables, and the this keyword. This is a review and a deeper dive into variables than we covered in Intro to Javascript
+ - Arrays, including join, map, and filter functions. Again, this is a review and then a deeper dive than covered in Intro to Javascript
  - Functions, including function declarations, function expressions, hoisting, IIFEs, arguments, this, closures and the bind, apply, and call methods. A review of what we know already, then a deeper look at functions.
- - Objects, including different ways to create objects, the built-in objects and the global object. A review of what we learned in 101, then a deeper look at objects.
+ - Objects, including different ways to create objects, the built-in objects and the global object. A review of what we learned in Intro to Javascript, then a deeper look at objects.
  - Object-oriented JavaScript, including prototypes and inheritance
  - Advanced DOM Manipulation, including event delegation
  - Ajax and JSON - including how to make asynchronous calls, parse JSON responses, and update the UI
@@ -50,8 +52,8 @@ You should have:
 
 Resource|URL
 ---|---
-Intro|[Intro Slides](https://gdidayton.github.io/gdi-intermediate-js/intro-slides.html)
-Slides|[https://gdidayton.github.io/gdi-intermediate-js/](https://gdidayton.github.io/gdi-intermediate-js/#/)
+Intro|[Intro Slides](https://github.com/gdiseattle/gdi-intermediate-js)
+Slides|[https://github.com/gdiseattle/gdi-intermediate-js](https://github.com/gdiseattle/gdi-intermediate-js/#/)
 Codepen|[https://codepen.io/collection/AygMPm/](https://codepen.io/collection/AygMPm/)
 
 
