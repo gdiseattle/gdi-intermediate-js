@@ -1,18 +1,18 @@
 ![Girl Develop It](img/gdi-logo.png) <!-- .element: class="no-border" -->
 
 #### Network: Substantial
-#### Slides: [https://gdiseattle.github.io/gdi-intermediate-js/intro-slides.html#/](https://gdiseattle.github.io/gdi-intermediate-js/intro-slides.html#/)
+#### Slides: [https://gdiseattle.github.io/gdi-intermediate-js/](https://gdiseattle.github.io/gdi-intermediate-js/)
 
 While you wait for class to begin, get on the wifi, bring up the slides and go through the prerequisites for class.
 
 ---
 ![Girl Develop It](img/gdi-logo.png) <!-- .element: class="no-border" -->
 ## Intermediate JavaScript</h3>
-Brought to you by [Girl Develop It Seattle](www.gdiseattle.com)
+Brought to you by [Girl Develop It Seattle](https://www.girldevelopit.com/chapters/seattle)
 
 [@gdiseattle](http://www.twitter.com/gdiseattle)
 
-Presented by [Paige Bystrom](http://www.twitter.com/radmint) & [Nicole C Peoples](http://www.twitter.com/thepeoplespeeps)
+Presented by [Paige Bystrom](http://www.twitter.com/radmint) & [Nicole Cherie Peoples](http://www.twitter.com/thepeoplespeeps)
 
 
 ---
