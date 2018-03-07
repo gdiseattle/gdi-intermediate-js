@@ -1,7 +1,7 @@
 ![Girl Develop It](img/gdi-logo.png) <!-- .element: class="no-border" -->
 
-#### Network: BuildRight
-#### Slides: [http://bit.ly/gdi-inter-js-slides](https://gdiseattle.github.io/gdi-intermediate-js/)
+#### Network: Substantial
+#### Slides: [https://gdiseattle.github.io/gdi-intermediate-js/intro-slides.html#/](https://gdiseattle.github.io/gdi-intermediate-js/intro-slides.html#/)
 
 While you wait for class to begin, get on the wifi, bring up the slides and go through the prerequisites for class.
 
