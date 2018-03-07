@@ -16,7 +16,7 @@ Take your JavaScript skills to the next level with this class, which will build 
 
 **Time: 6:30pm - 8:30pm**
 
-**Location: TBD**
+**Location: [Substantial](https://goo.gl/maps/HroHZSaKRRs)**
 
 A limited number of scholarships are available for those with a financial hardship. To apply, contact us at seattle@girldevelopit.com
 
