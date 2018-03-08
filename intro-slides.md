@@ -1,6 +1,6 @@
 ![Girl Develop It](img/gdi-logo.png) <!-- .element: class="no-border" -->
 
-#### Network: Substantial
+#### Network: Substantial Public
 #### Slides: [https://gdiseattle.github.io/gdi-intermediate-js/](https://gdiseattle.github.io/gdi-intermediate-js/)
 
 While you wait for class to begin, get on the wifi, bring up the slides and go through the prerequisites for class.
