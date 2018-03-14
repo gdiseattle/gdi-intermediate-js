@@ -50,11 +50,11 @@
 			<div class="slides">
 				<!-- Opening -->
 				<section style="top:-450px">
-					<img src="img/gdi-logo.png" alt="GDI Logo" class="noborder" style="width:8em;"/>
+					<img src="img/dayton-logo.png" alt="GDI Logo" class="noborder"/>
 					<h1>Intermediate JavaScript</h1>
 					<h2>Class 2: Functions, DOM, and Events</h2>
 					<p>
-						<small>View the slides at <a href ="https://github.com/gdiseattle/gdi-intermediate-js">github.com/gdiseattle/gdi-intermediate-js</a>.</small>
+						<small>View the slides at <a href ="https://gdiseattle.github.io/gdi-intermediate-js/">gdiseattle.github.io/gdi-intermediate-js</a>.</small>
 					</p>
 				</section>
 
@@ -77,7 +77,7 @@ add(5, 4);</code></pre>
 					</ul>
 
 					<aside class="notes">
-
+							ES6 Functions<a href="http://bit.ly/2phTmIitarget" target=blank>http://bit.ly/2phTmIi</a>
 					</aside>
 				</section>
 
@@ -158,7 +158,7 @@ function saySomething(text) {
 					<p class="fragment">It works! The function gets <span class="blue">hoisted</span>, or moved to the top of its scope.</p>
 					<p class="fragment">This is both good and bad. Good because it keeps our code from throwing errors. Bad because it allows us to develop bad habits in our code.</p>
 					<br>
-					<a href="http://bit.ly/intermediate-js-hoisting target" target=blank>http://bit.ly/intermediate-js-hoisting</a>
+					<a href="http://bit.ly/2tQASEd target" target=blank>http://bit.ly/2tQASEd</a>
 
 				</section>
 				<section>
@@ -180,7 +180,8 @@ var saySomething = function(text) {
 }
 
 saySomething('hello');</code></pre>
-					<a href="http://bit.ly/intermediate-js-function-expressions" target=blank>http://bit.ly/intermediate-js-function-expressions</a>
+					ES5: <a href="http://bit.ly/intermediate-js-function-expressions" target=blank>http://bit.ly/intermediate-js-function-expressions</a>
+					ES6: <a href="http://bit.ly/2DrkTfo" target=blank>http://bit.ly/2DrkTfo</a>
 
 <aside class="notes">
 	Hoisting, a JavaScript feature that allows you to make forward references to functions and variables
@@ -207,7 +208,9 @@ saySomething('hello');</code></pre>
 					<h4>Yo dawg, I heard you liked functions...</h4>
 					<p>We can also use a function expression to create a function that is invoked immediately - an IIFE.</p>
 <pre><code class="javascript">// Anything within the parentheses is part of an expression
-(function () { /* logic here */ });
+(function () { /* logic here */ }());
+or
+(function () { /* logic here */ })();
 </code></pre>
 					<p>It starts with a <code>(</code> not with <code>function</code>.</p>
 				</section>
@@ -246,9 +249,10 @@ saySomething('hello');</code></pre>
 	return a + b;
 };
 
-console.log(addTwo(3, 10));</code></pre>
+console.log(addTwo(3, 10, 11, 14, 16));</code></pre>
 					<br>
 					<a href="http://bit.ly/intermediate-js-function-arguments" target=blank>http://bit.ly/intermediate-js-function-arguments</a>
+
 				</section>
 
 				<section>
@@ -264,6 +268,8 @@ console.log(addTwo(3, 10));</code></pre>
 
 console.log(addMany(3, 10, 57, 24));
 console.log(addMany(3, 10, 57, 24, 200, 300));</code></pre>
+<br>
+<a href="http://bit.ly/2FIyXTI" target=blank>http://bit.ly/2FIyXTI</a>
 				</section>
 
 				<section>
@@ -274,6 +280,8 @@ console.log(addMany(3, 10, 57, 24, 200, 300));</code></pre>
 	console.log(newName);
 };
 </code></pre>
+<br>
+<a href="http://bit.ly/2tOaSJn" target=blank>http://bit.ly/2tOaSJn</a>
 				</section>
 
 				<section>
@@ -388,7 +396,7 @@ catCall();
 // global var name with module's property name
 var catCall = cat.callCat.bind(cat);
 catCall(); //Come here, Artie</code></pre>
-					<a href="http://bit.ly/intermediate-js-bind" target=blank>http://bit.ly/intermediate-js-bind</a>
+					<a href="http://bit.ly/2GtTxIG" target=blank>http://bit.ly/2GtTxIG</a>
 				</section>
 
 				<section>
@@ -417,7 +425,7 @@ var dog = new Dog('Roscoe', 40);</code></pre>
 				<section>
 					<h3>Other Functions</h3>
 					<p>
-						Check them out <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">here</a>
+						Check them out <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">here</a>
 					</p>
 					<ul>
 						<li><code>apply()</code></li>
@@ -451,7 +459,8 @@ showRelationship('Natalie', 'Ollie');</code></pre>
 
 				<!-- Advanced DOM -->
 				<section>
-					<h3>The DOM: Sample HTML</h3>
+					<h3>The DOM: Review</h3>
+				  <h3>Sample HTML</h3>
 <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -553,10 +562,10 @@ showRelationship('Natalie', 'Ollie');</code></pre>
 <pre><code class="javascript">document.getElementsByClassName('upper')[1];</code></pre>
 				</section>
 
-				<section>
+				<!-- <section>
 					<h3>Let's Develop It!</h3>
 					<p>Pair up with a buddy</p>
-					<p>Open <code>girldevelopit.com</code> in your browser, then open the console.</p>
+					<p>Open <code>gdidayton.com</code> in your browser, then open the console.</p>
 					<p>One person will select a couple different elements on the page, and the other person has to use document methods to select them. You'll know you've got the right one when you hover over it and it highlights on the page (I'll demonstrate).</p>
 					<p>Take turns.</p>
 				</section>
@@ -580,7 +589,7 @@ myNewElement.className = 'new';</code></pre>
 </code></pre>
 						</li>
 					</ol>
-				</section>
+				</section> -->
 
 				<section>
 					<h2>Questions?</h2>
@@ -637,7 +646,8 @@ var myCallback = function() {
 
 myButton.addEventListener('click', myCallback);</code></pre>
 					<p>&nbsp;</p>
-					<a href="http://bit.ly/intermediate-js-addEventListener" target=blank>http://bit.ly/intermediate-js-addEventListener</a>
+					ES5: <a href="http://bit.ly/intermediate-js-addEventListener" target=blank>http://bit.ly/intermediate-js-addEventListener</a>
+					ES6: <a href="http://bit.ly/2FVLGWe" target=blank>http://bit.ly/2FVLGWe</a>
 					<p>We can remove that event listener later on:</p>
 <pre><code class="javascript">myButton.removeEventListener('click', myCallback);
 </code></pre>
@@ -797,7 +807,7 @@ list.addEventListener('click', listClicking);</code></pre>
 					<p>Two things for you to do before next week's class:</p>
 					<ol>
 						<li>Learn how to set up a <a href="files/exercise-localserver.html" target="_new">local server</a>.</li>
-						<li>Work through the <a href="files/exercise-homework2.html">homework problems</a>.</li>
+						<li>Work through the homework problems.</li>
 					</ol>
 					<p>&nbsp;</p>
 					</section>
@@ -805,7 +815,7 @@ list.addEventListener('click', listClicking);</code></pre>
 			</div>
 			<footer>
 				<div class="copyright">
-					Intermediate JavaScript -- Seattle --
+					JavaScript 201 -- Dayton --
 					<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
 				</div>
 			</footer>
