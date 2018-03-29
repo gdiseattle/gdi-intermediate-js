@@ -340,9 +340,7 @@ if(request) {
 
 				<section>
 					<h3>Cross Domain Policy</h3>
-					<h4>or Same-Origin Policy</h4>
-					<p>If we're on this page: <a>http://store.company.com/dir/page.html</a></p>
-					<p>Here's how these ajax requests will work out:</p>
+					<p>If we're on this page: <a>http://store.company.com/dir/page.html</a> Here's how these ajax requests will work out:</p>
 					<table>
 						<thead>
 							<tr>
@@ -373,18 +371,13 @@ if(request) {
 								<td>Different port</td>
 							</tr>
 							<tr class="failure">
-								<td>http://news.company.com/dir/other.html</td>
-								<td>Failure</td>
-								<td>Different host</td>
-							</tr>
-							<tr class="failure">
 								<td>http://google.com</td>
 								<td>Failure</td>
 								<td>Different host</td>
 							</tr>
 						</tbody>
 					</table>
-					<p class="fragment">
+					<p>
 						This is to prevent malicious scripts from running on the page.
 					</p>
 				</section>
@@ -422,15 +415,8 @@ if(request) {
 				</section>
 
 				<section>
-					<h3>The <code>readyState</code> property</h3>
-					<p>Indicates the current state of the Ajax request. Possible values:</p>
-					<img src="img/readystate.png" width="1136" alt="">
-				</section>
-
-				<section>
 					<h3><code>POST</code>: The <code>setRequestHeader()</code> method</h3>
 					<p>Since we're sending data with the <code>POST</code> type, we have an extra step. We need to use the <code>setRequestHeader</code> method of the XHR object to set the request headers.</p>
-					<p>Request headers are bits of metadata that describe the request so the server understands what to expect from the data received.</p>
 					<p><code>setRequestHeader()</code> takes two arguments:</p>
 					<ol>
 						<li>Name of the header (string)</li>
@@ -518,7 +504,7 @@ if(request) {
 				<section>
 					<h3>Status</h3>
 					<p>When the server sends back a response, it always includes response headers with metadata about the response.</p>
-					<p>These headers include a <span class="blue">status code</span> - a three digit number that is part of the HTTP protocol</p>
+					<p>These headers include a <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes" target="_blank">status code</a> - a three digit number that is part of the HTTP protocol</p>
 					<p>Some examples:</p>
 					<ul>
 						<li><code>404</code> - not found</li>
@@ -610,10 +596,15 @@ if (request) {
 			var jsonObj = JSON.parse(request.responseText);
 
 			var p = document.createElement('p');
-			p.innerHTML = 'My name is ' + jsonObj.firstName + ' ' + jsonObj.lastName + ' and I live at ' + jsonObj.address.streetAddress + ' in ' + jsonObj.address.city + '. ';
-			p.innerHTML += 'My zip code is ' + jsonObj.address.postalCode + '.';
+			p.innerHTML = 'My name is ' + jsonObj.firstName + 
+				' ' + jsonObj.lastName + ' and I live at ' + 
+				jsonObj.address.streetAddress + ' in ' + 
+				jsonObj.address.city + '. ';
+			p.innerHTML += 'My zip code is ' + 
+				jsonObj.address.postalCode + '.';
 
-			var displayBox = document.getElementById('resultsBox');
+			var displayBox = 
+				document.getElementById('resultsBox');
 
 			displayBox.appendChild(p);
 		}
